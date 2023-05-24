@@ -104,13 +104,14 @@ export default class Marspic extends Component {
                     <div className="row">
                         {Object.values(this.state.article.photos).map((element) => (
                             <div key={element.id}>
-                                ID : {element.id}
+                                ID : {element.id} <br/>
+                                STATUS:{element.rover.status}
                                 <div className="card" style={{ backgroundColor: "black", color: "antiquewhite", border: "2px solid antiquewhite " }}>
                                     <div className="text-center">
                                         <img src={element.img_src} className="img-fluid my-2" style={{ aspectRatio: "20/20", height: "auto", width: "50%", border: "2px solid antiquewhite" }} alt={element.img_src}></img>
                                     </div>
                                     <div className="card-body">
-                                        <div className="d-flex justify-content-between mb-3">
+                                        <div className="d-flex justify-content-between">
                                             <div className="container">
                                                 <b>Camera description : </b><br />
                                                 ID: {element.camera.id}<br />
@@ -118,15 +119,12 @@ export default class Marspic extends Component {
                                                 ROVER ID: {element.camera.rover_id}<br />
                                                 FULL NAME: {element.camera.full_name}<br />
                                             </div>
-                                            <div className="container" style={{ textAlign: "center" }}>
+                                            <div className="container" style={{ textAlign: "left" }}>
                                                 <b>ROVER INFO : </b><br />
                                                 ID: {element.rover.id}<br />
                                                 NAME: {element.rover.name}<br />
                                                 LAUNCH DATE: {element.rover.launch_date}<br />
                                                 LANDING DATE: {element.rover.landing_date}<br />
-                                            </div>
-                                            <div className="container" style={{ textAlign: "right" }}>
-                                                <b>STATUS:</b> {element.rover.status}
                                             </div>
                                         </div>
                                     </div>
