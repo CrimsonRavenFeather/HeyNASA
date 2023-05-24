@@ -1,24 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar';
+import Pic_of_the_day from './Components/Pic_of_the_day';
+import Footer from './Components/Footer';
+import Marspic from './Components/Marspic';
+import Mars_selector from './Components/Mars_selector';
+import { useState } from 'react';
+import Content from './Components/Content';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Content></Content>
+      <Footer></Footer>
+    </>
   );
 }
 
